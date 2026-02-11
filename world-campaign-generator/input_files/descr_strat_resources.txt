@@ -1,0 +1,1053 @@
+
+;Tenochtitlan_Province
+resource	timber,	26,	242
+resource	gold,	20,	239
+resource	gold,	2,	232
+resource	tobacco,	3,	231
+resource	chocolate,	4,	236
+
+;Roman_Province
+resource	wool,	254,	165
+resource	cotton,	253,	160
+resource	wine,	250,	164
+
+;Constantinople_Province
+resource	silk,	367,	167
+resource	grain,	361,	163
+resource	dyes,	363,	161
+resource	wine,	256,	159
+
+;Frankfurt_Province
+resource	wool,	243,	240
+resource	coal,	243,	248
+resource	grain,	249,	253
+resource	dogs,	237,	247
+
+;Cordoba_Province
+resource	silver,	126,	143
+resource	sugar,	119,	137
+resource	sulfur,	128,	154
+resource	spices,	120,	131
+
+;Iconium_Province
+resource	sulfur,	398,	137
+resource	iron,	398,	142
+resource	wool,	407,	138
+
+;London_Province
+resource	wool,	186,	261
+resource	dyes,	192,	264
+resource	tin,	187,	264
+
+;Paris_Province
+resource	wine,	198,	237
+resource	timber,	198,	219
+resource	iron,	196,	239
+
+;Cairo_Province
+resource	cotton,	405,	56
+resource	sugar,	402,	56
+resource	silk,	410,	57
+
+;Sarkel_Province
+resource	silver,	449,	239
+resource	timber,	441,	234
+resource	slaves,	443,	241
+
+;Kiev_Province
+resource	furs,	377,	232
+resource	silver,	370,	251
+resource	timber,	373,	246
+resource	slaves,	380,	241
+resource	grain,	372,	238
+
+;Budapest_Province
+resource	wine,	301,	208
+resource	timber,	311,	216
+resource	iron,	295,	213
+
+;Krakow_Province
+resource	furs,	299,	237
+resource	silver,	297,	249
+resource	sulfur,	309,	247
+resource	slaves,	323,	242
+
+;Arhus_Province
+resource	fish,	245,	295
+resource	amber,	249,	300
+resource	dogs,	245,	313
+
+;Lisbon_Province
+resource	marble,	101,	155
+resource	tin,	102,	162
+resource	wine,	98,		143
+
+;Toledo_Province
+resource	iron,	132,	164
+resource	wool,	141,	165
+resource	grain,	146,	171
+
+;Naples_Province
+resource	wool,	266,	153
+resource	grain,	277,	149
+resource	dyes,	277,	146
+
+;Venice_Province
+resource	timber,	250,	196
+resource	silk,	248,	193
+resource	grain,	253,	199
+resource	dyes,	257,	199
+
+;Milan_Province
+resource	textiles,	235,	196
+resource	grain,	232,	196
+resource	grain,	241,	294
+
+;Edinburgh_Province
+resource	furs,	178,	304
+resource	timber,	171,	311
+resource	iron,	172,	308
+resource	textiles,	168,	312
+
+;Oslo_Province
+resource	furs,	238,	334
+resource	fish,	245,	335
+resource	timber,	249,	330
+resource	iron,	252,	324
+resource	amber,	253,	325
+
+;Jerusalem_Province
+resource	wool,	439,	78
+resource	sugar,	443,	79
+resource	silver,	446,	97
+resource	spices,	434,	92
+
+;Antioch_Province
+resource	cotton,	435,	129
+resource	sugar,	432,	131
+resource	iron,	443,	146
+
+;Vilnius_Province
+resource	furs,	324,	284
+resource	timber,	321,	293
+resource	slaves,	333,	292
+
+;Marienburg_Province
+resource	timber,	301,	271
+resource	iron,	295,	272
+resource	grain,	303,	271
+
+;Novgorod_Province
+resource	furs,	350,	314
+resource	timber,	363,	325
+resource	amber,	345,	318
+resource	furs,	351,	293
+
+;Cork_Province
+resource	timber,	131,	282
+resource	iron,	140,	277
+resource	dogs,	136,	282
+
+;Caernarvon_Province
+resource	wool,	165,	279
+resource	coal,	167,	283
+resource	textiles,	164,	276
+
+;Murom_Province
+resource	iron,	443,	285
+resource	grain,	445,	279
+resource	dogs,	447,	304
+
+;Tingvalla_Province
+resource	furs,	260,	330
+resource	timber,	255,	330
+resource	grain,	263,	330
+
+;Tver_Province
+resource	furs,	381,	316
+resource	iron,	395,	314
+resource	amber,	384,	320
+
+;Oran_Province
+resource	slaves,	152,	110
+resource	sugar,	144,	110
+resource	spices,	158,	111
+
+;Malta_Province
+resource	fish,	265,	102
+resource	wine,	267,	102
+
+;Badajoz_Province
+resource	timber,	121,	160
+resource	wool,	114,	160
+resource	dogs,	116,	166
+
+;North_America
+resource	gold,	43,	316
+resource	coal,	39,	311
+resource	tobacco,	40,	301
+resource	tobacco,	28,	312
+
+;Malatya_Province
+resource	silk,	450,	157
+resource	iron,	448,	162
+resource	gold,	463,	165
+
+;Huaxtepec_Province
+resource	silver,	2,	221
+resource	tobacco,	11,	223
+resource	gold,	14,	223
+
+;Lancaster_Province
+resource	timber,	175,	288
+resource	coal,	174,	284
+resource	grain,	175,	281
+
+;Castle_Town_Province
+resource	fish,	166,	292
+
+;Wick_Province
+resource	fish,	175,	331
+resource	wool,	171,	329
+resource	dogs,	173,	329
+
+;Skara_Province
+resource	timber,	260,	319
+resource	amber,	268,	323
+resource	sulfur,	255,	315
+resource	grain,	266,	315
+
+;Agder_Province
+resource	fish,	235,	320
+resource	amber,	232,	319
+resource	grain,	231,	322
+
+;Hrodna_Province
+resource	furs,	328,	274
+resource	timber,	323,	268
+resource	slaves,	322,	281
+
+;Pskov_Province
+resource	furs,	335,	306
+resource	timber,	338,	316
+resource	amber,	339,	313
+
+;Arensburg_Province
+resource	furs,	311,	321
+resource	fish,	310,	319
+resource	amber,	310,	320
+
+;Poznan_Province
+resource	timber,	287,	261
+resource	amber,	279,	262
+resource	grain,	291,	258
+
+;Palanga_Province
+resource	timber,	310,	300
+resource	slaves,	303,	302
+resource	amber,	302,	299
+
+;Santiago_Province
+resource	timber,	112,	194
+resource	coal,	115,	187
+resource	grain,	109,	184
+
+;Utrecht_Province
+resource	textiles,	219,	261
+resource	dyes,	214,	271
+resource	grain,	221,	264
+
+;Galway_Province
+resource	furs,	139,	300
+resource	timber,	143,	289
+resource	dogs,	137,	287
+resource	grain,	140,	296
+
+;Cardiff_Province
+resource	timber,	172,	269
+resource	coal,	162,	270
+resource	grain,	172,	273
+resource	tin,	169,	267
+
+;Visby_Province
+resource	silver,	287,	311
+resource	timber,	289,	308
+resource	amber,	290,	310
+
+;Ancona_Province
+resource	marble,	262,	176
+resource	timber,	261,	165
+resource	sugar,	265,	167
+
+;Krak_de_Chevaliers_Province
+resource	sugar,	435,	119
+resource	spices,	435,	122
+resource	camels,	438,	122
+resource	dyes,	433,	122
+
+;Valladolid_Province
+resource	timber,	143,	185
+resource	iron,	137,	185
+resource	fish,	144,	191
+
+;Exeter_Province
+resource	wool,	159,	259
+resource	dyes,	173,	257
+resource	tin,	178,	257
+
+;Gloucester_Province
+resource	dyes,	180,	272
+resource	tin,	176,	275
+resource	tin,	176,	265
+resource	dogs,	177,	277
+
+;Clermont_Province
+resource	iron,	189,	198
+resource	dyes,	186,	208
+resource	wine,	187,	202
+
+;Reval_Province
+resource	fish,	317,	318
+resource	timber,	327,	319
+resource	amber,	325,	321
+
+;Lund_Province
+resource	timber,	267,	293
+resource	amber,	260,	295
+resource	timber,	269,	300
+
+;Kerak_Province
+resource	silk,	451,	95
+resource	wool,	449,	79
+resource	camels,	454,	87
+
+;Konigsberg_Province
+resource	timber,	304,	283
+resource	amber,	297,	287
+resource	dogs,	303,	288
+
+;Danzig_Province
+resource	furs,	285,	279
+resource	amber,	281,	282
+resource	dogs,	280,	275
+
+;Inverness_Province
+resource	timber,	173,	318
+resource	wool,	170,	321
+resource	coal,	166,	318
+
+;Aberdeen_Province
+resource	fish,	181,	321
+resource	iron,	176,	315
+resource	dogs,	176,	321
+
+;Dumfries_Province
+resource	fish,	167,	303
+resource	timber,	172,	300
+resource	textiles,	165,	299
+
+;Stockholm_Province
+resource	furs,	291,	324
+resource	fish,	294,	332
+resource	timber,	291,	328
+resource	iron,	282,	327
+resource	amber,	286,	329
+
+;Kalmar_Province
+resource	furs,	274,	307
+resource	fish,	284,	315
+resource	timber,	273,	315
+resource	iron,	278,	316
+resource	amber,	282,	313
+
+;Helsinki_Province
+resource	furs,	320,	332
+resource	fish,	313,	334
+resource	silver,	328,	335
+resource	timber,	341,	335
+
+;Moscow_Province
+resource	furs,	409,	297
+resource	timber,	413,	307
+resource	grain,	408,	302
+
+;Belo-Ozero_Province
+resource	furs,	417,	324
+resource	timber,	419,	323
+resource	dogs,	419,	329
+
+;Volga-Bulgar_Province
+resource	silver,	473,	285
+resource	timber,	467,	290
+resource	slaves,	478,	290
+resource	camels,	506,	282
+
+;Viatka_Province
+resource	furs,	482,	309
+resource	timber,	483,	319
+resource	slaves,	488,	315
+resource	fish,	455,	317
+
+;Riga_Province
+resource	furs,	310,	310
+resource	timber,	315,	305
+resource	amber,	319,	312
+resource	amber,	306,	307
+
+;Smolensk_Province
+resource	furs,	368,	286
+resource	timber,	365,	285
+resource	dogs,	372,	286
+
+;Dublin_Province
+resource	furs,	158,	296
+resource	silver,	151,	290
+resource	slaves,	154,	290
+resource	gold,	154,	296
+
+;Wexford_Province
+resource	furs,	146,	282
+resource	timber,	154,	281
+resource	silver,	147,	282
+
+;Donegal_Province
+resource	furs,	148,	303
+resource	timber,	153,	307
+resource	iron,	150,	306
+
+;York_Province
+resource	wool,	187,	287
+resource	coal,	184,	294
+resource	dogs,	182,	303
+
+;Cuba
+resource	silver,	47,	283
+resource	timber,	43,	285
+resource	gold,	39,	282
+resource	tobacco,	51,	276
+
+;Ryazan_Province
+resource	timber,	418,	278
+resource	iron,	422,	278
+resource	dogs,	432,	283
+
+;Nottingham_Province
+resource	wool,	191,	274
+resource	dyes,	186,	275
+resource	dogs,	194,	266
+
+;Stettin_Province
+resource	furs,	267,	274
+resource	timber,	261,	280
+resource	amber,	265,	276
+
+;Hamburg_Province
+resource	furs,	237,	272
+resource	silver,	247,	276
+resource	timber,	245,	273
+
+;Roskilde_Province
+resource	fish,	249,	286
+resource	iron,	253,	292
+resource	amber,	253,	288
+
+;Tollan_Province
+resource	dyes,	11,	268
+resource	gold,	5,	267
+resource	tobacco,	9,	267
+resource	chocolate,	9,	260
+
+;Azov_Province
+resource	silver,	423,	237
+resource	timber,	414,	237
+resource	slaves,	419,	240
+
+;Atil_Province
+resource	furs,	481,	256
+resource	timber,	480,	247
+resource	slaves,	488,	265
+resource	fish,	491,	259
+
+;Samandar_Province
+resource	furs,	487,	225
+resource	timber,	490,	222
+resource	slaves,	487,	233
+resource	cotton,	497,	222
+
+;Antwerp_Province
+resource	textiles,	208,	253
+resource	dyes,	212,	255
+resource	dogs,	208,	259
+
+;Magdeburg_Province
+resource	timber,	256,	271
+resource	wool,	253,	263
+resource	grain,	255,	268
+resource	dogs,	261,	256
+
+;Halych_Province
+resource	furs,	333,	240
+resource	timber,	341,	241
+resource	slaves,	338,	246
+
+;Peremyshl_Province
+resource	furs,	321,	248
+resource	timber,	326,	246
+resource	sulfur,	312,	259
+resource	grain,	318,	264
+
+;Tzernigov_Province
+resource	furs,	383,	270
+resource	timber,	391,	255
+resource	sulfur,	378,	264
+resource	slaves,	381,	257
+resource	grain,	397,	239
+
+;Kozelsk_Province
+resource	furs,	400,	277
+resource	timber,	398,	275
+resource	sulfur,	390,	280
+resource	slaves,	395,	277
+
+;Turov_Province
+resource	furs,	359,	262
+resource	sulfur,	345,	264
+resource	slaves,	351,	266
+resource	grain,	347,	259
+
+;Minsk_Province
+resource	timber,	352,	286
+resource	sulfur,	346,	289
+resource	slaves,	352,	289
+
+;Bruges_Province
+resource	textiles,	194,	248
+resource	dyes,	203,	257
+resource	wool,	199,	244
+
+;Metz_Province
+resource	timber,	225,	233
+resource	iron,	219,	230
+resource	grain,	228,	237
+
+;Caen_Province
+resource	timber,	185,	243
+resource	dyes,	175,	239
+resource	grain,	174,	231
+
+;Prague_Province
+resource	timber,	273,	232
+resource	coal,	282,	238
+resource	tin,	271,	245
+resource	iron,	260,	237
+
+;Rheims_Province
+resource	iron,	205,	236
+resource	coal,	208,	234
+resource	wine,	209,	225
+
+;Rennes_Province
+resource	fish,	155,	233
+resource	wine,	163,	226
+resource	textiles,	171,	226
+
+;Nuremburg_Province
+resource	wine,	252,	237
+resource	timber,	260,	230
+resource	iron,	251,	232
+resource	tin,	256,	239
+resource	gold,	263,	228
+
+;Hohenstauffen_Province
+resource	furs,	228,	222
+resource	wine,	230,	229
+resource	timber,	239,	222
+
+;Iasi_Province
+resource	wine,	357,	218
+resource	timber,	353,	217
+resource	iron,	348,	225
+resource	timber,	338,	228
+resource	grain,	353,	212
+
+;Tixtla_Province
+resource	gold,	4,	206
+resource	tobacco,	7,	205
+resource	chocolate,	8,	207
+
+;Angers_Province
+resource	wine,	176,	221
+resource	timber,	179,	229
+resource	iron,	176,	221
+
+;Bran_Province
+resource	wine,	339,	207
+resource	timber,	334,	205
+resource	iron,	337,	205
+
+;Tmutarakan_Province
+resource	furs,	423,	212
+resource	fish,	424,	208
+resource	slaves,	417,	219
+
+;Cherson_Province
+resource	silver,	395,	207
+resource	timber,	389,	209
+resource	slaves,	402,	214
+resource	grain,	396,	223
+
+;Vienna_Province
+resource	silver,	272,	217
+resource	timber,	278,	214
+resource	iron,	285,	219
+
+;Dijon_Province
+resource	wine,	213,	216
+resource	iron,	204,	216
+resource	coal,	211,	213
+
+;Bern_Province
+resource	furs,	220,	206
+resource	timber,	221,	217
+resource	grain,	222,	203
+
+;Innsbruck_Province
+resource	furs,	254,	216
+resource	timber,	248,	213
+resource	grain,	252,	213
+
+;Bordeaux_Province
+resource	wine,	170,	189
+resource	dyes,	167,	200
+resource	grain,	172,	185
+
+;Tbilisi_Province
+resource	furs,	471,	191
+resource	timber,	482,	192
+resource	slaves,	480,	196
+resource	sugar,	505,	192
+resource	spices,	494,	197
+
+;Kutais_Province
+resource	furs,	454,	199
+resource	timber,	460,	195
+resource	slaves,	450,	202
+resource	wine,	455,	202
+
+;Bucharest_Province
+resource	wine,	352,	195
+resource	iron,	350,	202
+resource	fish,	365,	199
+
+;Turin_Province
+resource	furs,	218,	191
+resource	tin,	227,	193
+resource	textiles,	220,	199
+
+;Toulouse_Province
+resource	iron,	184,	191
+resource	dyes,	185,	183
+resource	coal,	174,	180
+
+;Barcelona_Province
+resource	silver,	181,	169
+resource	dyes,	186,	170
+resource	sugar,	183,	165
+
+;Leon_Province
+resource	wool,	124,	192
+resource	coal,	125,	178
+resource	grain,	123,	173
+
+;Zagreb_Province
+resource	timber,	283,	189
+resource	iron,	277,	190
+resource	grain,	280,	195
+
+;Belgrade_Province
+resource	timber,	303,	175
+resource	iron,	311,	184
+resource	grain,	305,	176
+
+;Sofia_Province
+resource	furs,	328,	177
+resource	timber,	339,	184
+resource	grain,	331,	176
+
+;Preslav_Province
+resource	wine,	350,	187
+resource	iron,	359,	187
+resource	textiles,	360,	183
+
+;Ragusa_Province
+resource	wine,	292,	171
+resource	timber,	288,	170
+resource	iron,	288,	173
+
+;Zara_Province
+resource	wine,	279,	180
+resource	timber,	271,	190
+resource	iron,	274,	184
+
+;Bologna_Province
+resource	marble,	245,	187
+resource	cotton,	250,	188
+resource	grain,	255,	179
+
+;Pamplona_Province
+resource	marble,	151,	186
+resource	wool,	158,	178
+resource	textiles,	163,	188
+
+;Genoa_Province
+resource	marble,	232,	189
+resource	textiles,	228,	188
+resource	spices,	234,	184
+
+;Florence_Province
+resource	marble,	243,	175
+resource	cotton,	246,	172
+resource	dyes,	252,	175
+
+;Trebizond_Province
+resource	silver,	448,	186
+resource	sulfur,	440,	183
+resource	sulfur, 450,	171
+
+;Sinope_Province
+resource	silver,	405,	180
+resource	silver,	405,	180
+resource	sulfur,	408,	178
+
+;Marseille_Province
+resource	wine,	209,	181
+resource	dyes,	214,	177
+resource	marble,	212,	188
+
+;Yerevan_Province
+resource	silk,	483,	179
+resource	iron,	480,	179
+resource	iron,	454,	170
+resource	furs,	467,	166
+resource	coal,	475,	182
+
+;Tabriz_Province
+resource	silk,	496,	168
+resource	iron,	502,	166
+resource	elephants,	497,	178
+resource	gold,	502,	182
+resource	spices,	501,	160
+
+;Zaragoza_Province
+resource	iron,	159,	169
+resource	grain,	164,	174
+resource	dyes,	165,	167
+
+;Oporto_Province
+resource	marble,	108,	181
+resource	timber,	109,	172
+resource	wine,	103,	172
+
+;Thessalonica_Province
+resource	marble,	325,	152
+resource	timber,	334,	151
+resource	sulfur,	330,	155
+
+;Ajaccio_Province
+resource	wine,	233,	170
+resource	textiles,	229,	167
+resource	spices,	228,	160
+
+;Nicaea_Province
+resource	silk,	377,	155
+resource	grain,	373,	157
+resource	dyes,	384,	162
+resource	silk,	377,	165
+
+;Athens_Province
+resource	wine,	340,	126
+resource	marble,	331,	139
+resource	grain,	335,	133
+resource	dyes,	334,	129
+
+;Adrianople_Province
+resource	wine,	346,	169
+resource	grain,	351,	170
+resource	dyes,	353,	167
+
+;Abydus_Province
+resource	wine,	356,	145
+resource	fish,	354,	143
+resource	textiles,	362,	153
+
+;Bari_Province
+resource	marble,	282,	147
+resource	wool,	291,	147
+resource	dyes,	282,	153
+
+;Syracuse_Province
+resource	sulfur,	272,	115
+resource	wool,	269,	112
+resource	fish,	274,	112
+resource	wine,	267,	113
+
+;Caesarea_Province
+resource	timber,	416,	150
+resource	silk,	427,	152
+resource	iron,	424,	157
+resource	spices,	425,	162
+
+;Ankara_Province
+resource	timber,	411,	160
+resource	silk,	404,	158
+resource	iron,	413,	158
+
+;Baghdad_Province
+resource	sulfur,	505,	125
+resource	silk,	501,	123
+resource	elephants,	496,	119
+resource	camels,	508,	130
+
+;Sevilla_Province
+resource	silver,	115,	137
+resource	sugar,	109,	138
+resource	wine,	106,	148
+resource	wine,	106,	148
+
+;Durazzo_Province
+resource	marble,	305,	150
+resource	timber,	313,	152
+resource	grain,	306,	154
+resource	dyes,	303,	151
+
+;Kerkyra_Province
+resource	fish,	307,	137
+resource	silver,	307,	142
+resource	wine,	306,	142
+
+;Valencia_Province
+resource	silver,	159,	144
+resource	wine,	154,	147
+resource	timber,	154,	154
+resource	fish,	161,	140
+resource	silk,	163,	154
+
+;Mallorca_Province
+resource	silver,	185,	145
+resource	wine,	187,	145
+resource	timber,	183,	145
+resource	sugar,	186,	146
+
+;Adana_Province
+resource	sulfur,	423,	135
+resource	wool,	427,	134
+resource	spices,	428,	138
+
+;Attalia_Province
+resource	sulfur,	397,	127
+resource	wool,	400,	125
+resource	coal,	403,	129
+
+;Mosul_Province
+resource	silk,	488,	138
+resource	cotton,	483,	139
+resource	silk,	489,	146
+
+;Cagliari_Province
+resource	fish,	228,	134
+resource	silver,	226,	135
+resource	fish,	232,	153
+
+;Edessa_Province
+resource	silver,	464,	145
+resource	silk,	459,	141
+resource	iron,	453,	109
+
+;Smyrna_Province
+resource	wine,	363,	121
+resource	timber,	361,	125
+resource	iron,	366,	125
+
+;Granada_Province
+resource	cotton,	141,	127
+resource	sugar,	128,	131
+resource	coal,	152,	134
+
+;Brazil
+resource	gold,	8,	142
+resource	tobacco,	11,	131
+resource	chocolate,	11,	144
+resource	timber,	8,	127
+
+;Aleppo_Province
+resource	silver,	445,	129
+resource	silk,	442,	128
+resource	spices,	448,	134
+resource	tin,	444,	124
+
+;Ayla_Province
+resource	silk,	447,	53
+resource	iron,	451,	60
+resource	camels,	461,	63
+
+;Al_Suways_Province
+resource	fish,	423,	60
+resource	iron,	435,	59
+resource	spices,	425,	60
+resource	ivory,	439,	44
+
+;Mekka_Province
+resource	marble,	479,	12
+resource	silk,	466,	9
+resource	iron,	474,	17
+resource	silk,	465,	12
+
+;Medina_Province
+resource	slaves,	459,	47
+resource	silk,	462,	34
+resource	camels,	472,	44
+resource	elephants,	465,	44
+
+;Buraidah_Province
+resource	slaves,	484,	78
+resource	silk,	484,	80
+resource	iron,	480,	77
+resource	slaves,	478,	87
+resource	camels,	480,	86
+
+;Palermo_Province
+resource	sulfur,	253,	123
+resource	cotton,	274,	124
+resource	grain,	258,	124
+
+;Corinth_Province
+resource	silver,	330,	124
+resource	marble,	329,	117
+resource	textiles,	333,	121
+
+;Marrakesh_Province
+resource	iron,	92,	96
+resource	cotton,	99,	102
+resource	sugar,	97,	98
+
+;Fez_Province
+resource	sulfur,	124,	107
+resource	iron,	109,	109
+resource	wool,	119,	112
+resource	timber,	104,	110
+
+;Sijilmasa_Province
+resource	iron,	123,	70
+resource	cotton,	134,	72
+resource	sugar,	139,	75
+
+;Isle_of_Cyprus
+resource	silver,	410,	108
+resource	wine,	414,	109
+resource	fish,	411,	116
+
+;Isle_of_Cyprus
+resource	silver,	415,	117
+resource	silk,	415,	115
+resource	sugar,	417,	114
+
+;Damascus_Province
+resource	cotton,	450,	114
+resource	sugar,	452,	114
+resource	iron,	453,	109
+
+;Algiers_Province
+resource	iron,	191,	115
+resource	cotton,	204,	114
+resource	sugar,	180,	114
+resource	silver,	146,	99
+resource	slaves,	196,	101
+
+;Tunis_Province
+resource	iron,	227,	114
+resource	cotton,	239,	111
+resource	sugar,	236,	106
+
+;Acre_Province
+resource	silver,	435,	104
+resource	silk,	434,	96
+resource	grain,	433,	106
+
+;Isle_of_Rhodes
+resource	silver,	371,	117
+resource	wine,	368,	115
+resource	marble,	367,	113
+
+;Isle_of_Crete
+resource	silver,	351,	102
+resource	silk,	345,	101
+resource	cotton,	344,	102
+
+;Tyre_Province
+resource	fish,	433,	112
+resource	silk,	435,	109
+resource	cotton,	435,	113
+
+;Ascalon_Province
+resource	silk,	433,	72
+resource	iron,	429,	75
+resource	spices,	431,	78
+
+;Tripoli_Province
+resource	slaves,	280,	53
+resource	cotton,	260,	67
+resource	sugar,	270,	66
+resource	slaves,	262,	68
+
+;Al-Mahdiya_Province
+resource	slaves,	237,	90
+resource	cotton,	235,	78
+resource	sugar,	230,	88
+
+;Al-Mansurya_Province
+resource	slaves,	196,	91
+resource	cotton,	198,	94
+resource	sugar,	195,	94
+resource	camels,	148,	70
+
+;Barqa_Province
+resource	timber,	356,	0
+resource	slaves,	351,	55
+resource	cotton,	337,	72
+resource	sugar,	314,	62
+resource	gold,	326,	55
+
+;Alexandria_Province
+resource	silver,	399,	61
+resource	cotton,	395,	64
+resource	sugar,	396,	68
+resource	spices,	389,	62
+
+;Dumyat_Province
+resource	cotton,	418,	70
+resource	sugar,	416,	70
+resource	spices,	413,	63
+resource	grain,	411,	73
+
+;Arguin_Province
+resource	slaves,	56,	37
+resource	ivory,	52,	36
+resource	gold,	54,	32
+
+;Timbuktu_Province
+resource	slaves,	115,	51
+resource	ivory,	152,	43
+resource	gold,	115,	20
+resource	slaves,	120,	23
+
+;Thebes_Province
+resource	timber,	419,	0
+resource	cotton,	422,	20
+resource	sugar,	421,	30
+resource	cotton,	444,	14
+
+;Dongola_Province
+resource	slaves,	397,	2
+resource	ivory,	392,	2
+resource	elephants,	380,	2
+resource	camels,	385,	7

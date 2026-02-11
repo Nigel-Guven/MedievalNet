@@ -1,0 +1,57 @@
+
+; ## Playable Factions
+
+campaign		imperial_campaign
+playable
+	wales							
+	ireland							
+	novgorod						
+	teutonic_order					
+	lithuania						
+	jerusalem						
+	antioch							
+	norway							
+	scotland						
+	milan							
+	venice											
+	sicily							
+	spain							
+	denmark							
+	poland							
+	hungary							
+	russia							
+	mongols							
+	egypt							
+	france										
+	england							
+	turks										
+	moors							
+	hre								
+	byzantium						
+	portugal						
+	timurids						
+	aztecs										
+						
+end
+unlockable
+end
+nonplayable
+	papal_states
+	slave
+end
+
+; ## Campaign Settings
+
+start_date	1180 summer
+end_date	1500 winter
+timescale	0.50
+
+
+marian_reforms_disabled
+rebelling_characters_active
+gladiator_uprising_disabled
+night_battles_enabled
+show_date_as_turns
+brigand_spawn_value 20000
+pirate_spawn_value 20000
+free_upkeep_forts 4

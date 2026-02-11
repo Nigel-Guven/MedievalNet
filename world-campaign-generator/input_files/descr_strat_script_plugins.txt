@@ -1,0 +1,9 @@
+; ## Script Plugins
+
+region Ascalon_Province
+
+farming_level 0
+famine_threat 0
+
+script
+campaign_script.txt

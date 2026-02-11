@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "name": "WorldEvent",
+    "namespace": "medievalnet.world",
+    {"name": "worldId", "type": "string"},
+    {
+        "name": "factions",
+        "type": "array",
+        
+    }
+}
