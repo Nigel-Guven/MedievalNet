@@ -12,7 +12,7 @@ services:
   kafka:
     image: confluentinc/cp-kafka:7.5.0
     ports:
-    - "9092:9092"
+      - "9092:9092"      # for host access (producer)
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -26,6 +26,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
 
   kafdrop:
     image: obsidiandynamics/kafdrop
@@ -43,3 +44,6 @@ services:
         condition: service_healthy
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      OUTPUT_DIR: /app/output
+    volumes:
+      - ./maps_repository:/app/output
