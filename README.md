@@ -1,1 +1,1 @@
-Hello there!
+![Latest Map](map_repository/latest_map.png)
