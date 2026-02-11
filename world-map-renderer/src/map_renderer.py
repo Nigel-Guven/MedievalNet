@@ -1,14 +1,14 @@
 from PIL import Image
 from consts import FACTION_COLOR
 import os
-import shutil
 
 TEMPLATE_PATH = "./templates/map_regions.tga"
-OUTPUT_DIR = "./output"
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", "/app/output")  # use environment variable
 
 def render_world_map(world_id, factions):
     DEFAULT_COLOR = (255, 0, 0)
 
+    # Build region → faction color map
     region_color_map = {}
     for faction in factions:
         faction_color = FACTION_COLOR.get(faction["faction_name"], DEFAULT_COLOR)
@@ -23,18 +23,20 @@ def render_world_map(world_id, factions):
 
         for x in range(image.width):
             for y in range(image.height):
-                current_color = pixels[x, y]
-                if current_color in region_color_map:
-                    pixels[x, y] = region_color_map[current_color]
+                if pixels[x, y] in region_color_map:
+                    pixels[x, y] = region_color_map[pixels[x, y]]
 
+        # Ensure output directory exists
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+        # Save world-specific map
         world_folder = os.path.join(OUTPUT_DIR, str(world_id))
         os.makedirs(world_folder, exist_ok=True)
-        file_name = f"{world_id}.png"
-        file_path = os.path.join(world_folder, file_name)
+        
+        file_path = os.path.join(world_folder, f"{world_id}.png")
         image.save(file_path)
         print(f"Map saved to {file_path}")
 
-        latest_png_path = os.path.join(OUTPUT_DIR, "latest_map.png")
+        latest_png_path = os.path.join(world_folder, f"latest_world.png")
         image.save(latest_png_path)
         print(f"Latest map updated at {latest_png_path}")
-

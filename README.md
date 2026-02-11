@@ -1,1 +1,1 @@
-![Latest Map](map_repository/latest_map.png)
+![Latest Map](map_repository/world_42c668c5f39840f288857f986b093da8.png)
