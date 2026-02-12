@@ -7,6 +7,7 @@ from objects.faction import Faction
 from objects.character.character import FemaleCharacter, MaleCharacter
 from objects.settlementconfiguration import SettlementConfiguration
 import matplotlib.pyplot as plt
+import consts
 
 
 seed_value = None
@@ -81,77 +82,91 @@ def getAILabel(factionName):
 # TODO: Aztec need changes here    
 def assign_settlements(factions, regions, region_amount):
 
-    special_papal_regions = {"Roman_Province"}
-    special_aztec_regions = {"Tenochtitlan_Province"}
-    special_slave_regions = {
-        "North_America", 
-        "Arguin_Province", 
-        "Timbuktu_Province", 
-        "Jolof_Province", 
-        "Fezzan"}
-     
-    excluded = special_slave_regions | special_aztec_regions | special_papal_regions
+    excluded_regions = consts.SPECIAL_SLAVE_REGIONS | consts.SPECIAL_AZTEC_REGIONS | consts.SPECIAL_PAPAL_REGIONS  
+    potential_seeds = [r for r in regions if r.province_name in consts.CAPITAL_CANDIDATES]
+    random.shuffle(potential_seeds)   
+    unclaimed = [r for r in regions if r.province_name not in excluded_regions]   
     
-    available_regions = [r for r in regions if r.province_name not in excluded]    
+    playable_factions = [f for f in factions if f.faction_name not in 
+                         { FactionEnum.AZTECS.value, FactionEnum.PAPAL_STATES.value, FactionEnum.SLAVE.value }]
     
-    random.shuffle(available_regions)
+    random.shuffle(playable_factions)
     random.shuffle(factions)
     
-    unclaimed = available_regions.copy()
+    SEARCH_RADIUS = 60
+    for r in unclaimed:
+        r.density_score = sum(1 for other in unclaimed if simple_distance(r, other) < SEARCH_RADIUS)
     
-    faction_seeds = [] 
-    
-    for faction in factions:
-        
-        if faction is None:
-            continue
-        
-        if faction.faction_name in {
-            FactionEnum.AZTECS.value,
-            FactionEnum.PAPAL_STATES.value,
-            FactionEnum.SLAVE.value
-        }:
-            continue
-        
-        if not faction_seeds:
-            seed = random.choice(list(unclaimed))
-        else:
-            seed = max(unclaimed, key=lambda r: min(weighted_distance(r,s) for s in faction_seeds))
+    unclaimed.sort(key=lambda r: r.density_score, reverse=True)
 
-        unclaimed.remove(seed)
-        faction_seeds.append(seed)
+    assigned_seeds = []
+    for faction in playable_factions:
+        if not potential_seeds:
+            break 
         
-        cluster = [seed]                    
+        seed = max(potential_seeds, key=lambda p: min(
+            [simple_distance(p, s) for s in assigned_seeds] + [999]
+        ))
         
-        while len(cluster) < region_amount and unclaimed:
-            next_region = min(
-                unclaimed,
-                key=lambda r: min(weighted_distance(r, c) for c in cluster)
-            )
+        faction.settlements = [seed]
+        assigned_seeds.append(seed)
+        potential_seeds.remove(seed)
+
+        if seed in unclaimed:
+            unclaimed.remove(seed)
+
+    for _ in range(region_amount - 1):
+        for faction in playable_factions:
+            if not unclaimed: break
+
+            capital = faction.settlements[0]
+            next_region = min(unclaimed, key=lambda r: (
+                min(simple_distance(r, c) for c in faction.settlements) * 0.7 + 
+                simple_distance(r, capital) * 0.3
+            ))
+            
+            faction.settlements.append(next_region)
             unclaimed.remove(next_region)
-            cluster.append(next_region)
-
-        faction.settlements = cluster
 
     aztec_faction = next(f for f in factions if f.faction_name == FactionEnum.AZTECS.value)
     aztec_faction.settlements = [
         r for r in regions
-        if r.province_name in special_aztec_regions
+        if r.province_name in consts.SPECIAL_AZTEC_REGIONS
     ]
     
     papal_faction = next(f for f in factions if f.faction_name == FactionEnum.PAPAL_STATES.value)
     papal_faction.settlements = [
         r for r in regions
-        if r.province_name in special_papal_regions
+        if r.province_name in consts.SPECIAL_PAPAL_REGIONS
     ]
         
     slave_faction = next(f for f in factions if f.faction_name == FactionEnum.SLAVE.value)
     slave_faction.settlements = [
         r for r in regions
-        if r.province_name in special_slave_regions
+        if r.province_name in consts.SPECIAL_SLAVE_REGIONS
     ]
     slave_faction.settlements.extend(unclaimed)
     
+def weighted_distance(regionA, regionB):
+    
+    #x_weight = (regionA.settlement_positionX + regionB.settlement_positionX) / 510
+    #y_weight = (regionA.settlement_positionY + regionB.settlement_positionY) / 337
+    
+    #dx = (regionA.settlement_positionX - regionB.settlement_positionX) * x_weight
+    #dy = (regionA.settlement_positionY - regionB.settlement_positionY) * y_weight
+    
+    dx = regionA.settlement_positionX - regionB.settlement_positionX
+    dy = regionA.settlement_positionY - regionB.settlement_positionY
+    
+    return math.hypot(dx, dy)
+
+def simple_distance(regionA, regionB):
+    
+    dx = regionA.settlement_positionX - regionB.settlement_positionX
+    dy = regionA.settlement_positionY - regionB.settlement_positionY
+    
+    return math.hypot(dx, dy)
+
 def assign_characters(factions):
 
     for faction in factions:
@@ -523,17 +538,8 @@ def assign_character_names(faction):
         if not is_male:
             character.character_name = f"{fname}".strip()
         else: 
-            character.character_name = f"{fname} {sname}".strip().replace("  ", " ")
-# TODO: Changes for algorithm here        
-def weighted_distance(regionA, regionB):
-    
-    x_weight = (regionA.settlement_positionX + regionB.settlement_positionX) / 510
-    y_weight = (regionA.settlement_positionY + regionB.settlement_positionY) / 337
-    
-    dx = (regionA.settlement_positionX - regionB.settlement_positionX) * x_weight
-    dy = (regionA.settlement_positionY - regionB.settlement_positionY) * y_weight
-    return math.hypot(dx, dy)
- 
+            character.character_name = f"{fname} {sname}".strip().replace("  ", " ")     
+
 def assignRandomAncillary():
     
     list_of_ancillaries = (

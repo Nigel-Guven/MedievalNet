@@ -8,8 +8,20 @@ import kafka_producer
 
 def main():
 
-    REGION_AMOUNT = 5
-
+    
+    region_amount = 5
+    
+    try:
+        region_amount = int(sys.argv[1])
+    
+        if 3 <= region_amount <= 6:
+            region_amount= region_amount 
+        else:
+            print(f"Invalid number {region_amount}, using default REGION_AMOUNT={region_amount}")
+    except (IndexError, ValueError):
+        print(f"No valid input provided, using default REGION_AMOUNT={region_amount}")
+        print(f"Using REGION_AMOUNT={region_amount}")
+    
     with open("../input_files/descr_regions.txt", "r") as f:
         regions_data = f.read()
     with open("../input_files/descr_names.txt", "r") as f:
@@ -23,7 +35,7 @@ def main():
     names = parser.parse_names(names_data)
     
     
-    campaign_factions = create_factions_configuration(regions, names, 5)
+    campaign_factions = create_factions_configuration(regions, names, region_amount)
     
     world_uuid = str(uuid.uuid4().hex)
     
