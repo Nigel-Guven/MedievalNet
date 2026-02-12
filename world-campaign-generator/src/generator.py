@@ -79,7 +79,8 @@ def getAILabel(factionName):
             case _:
                 return "catholic"
   
-# TODO: Aztec need changes here    
+# TODO: Aztec need changes here 
+# TODO: CONST CAPITALS BASED ON REGION AMOUNT   
 def assign_settlements(factions, regions, region_amount):
 
     excluded_regions = consts.SPECIAL_SLAVE_REGIONS | consts.SPECIAL_AZTEC_REGIONS | consts.SPECIAL_PAPAL_REGIONS  
@@ -93,7 +94,7 @@ def assign_settlements(factions, regions, region_amount):
     random.shuffle(playable_factions)
     random.shuffle(factions)
     
-    SEARCH_RADIUS = 60
+    SEARCH_RADIUS = 50
     for r in unclaimed:
         r.density_score = sum(1 for other in unclaimed if simple_distance(r, other) < SEARCH_RADIUS)
     
