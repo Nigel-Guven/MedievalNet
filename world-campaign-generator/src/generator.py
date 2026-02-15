@@ -94,7 +94,7 @@ def assign_settlements(factions, regions, region_amount):
     random.shuffle(playable_factions)
     random.shuffle(factions)
     
-    SEARCH_RADIUS = 50
+    SEARCH_RADIUS = 60
     for r in unclaimed:
         r.density_score = sum(1 for other in unclaimed if simple_distance(r, other) < SEARCH_RADIUS)
     
@@ -102,16 +102,15 @@ def assign_settlements(factions, regions, region_amount):
 
     assigned_seeds = []
     for faction in playable_factions:
-        if not potential_seeds:
-            break 
-        
+
         seed = max(potential_seeds, key=lambda p: min(
             [simple_distance(p, s) for s in assigned_seeds] + [999]
         ))
         
+        print(seed.settlement_name)
+
         faction.settlements = [seed]
         assigned_seeds.append(seed)
-        potential_seeds.remove(seed)
 
         if seed in unclaimed:
             unclaimed.remove(seed)
@@ -147,7 +146,14 @@ def assign_settlements(factions, regions, region_amount):
         if r.province_name in consts.SPECIAL_SLAVE_REGIONS
     ]
     slave_faction.settlements.extend(unclaimed)
+
+def simple_distance(regionA, regionB):
     
+    dx = regionA.settlement_positionX - regionB.settlement_positionX
+    dy = regionA.settlement_positionY - regionB.settlement_positionY
+    
+    return math.hypot(dx, dy)
+ 
 def weighted_distance(regionA, regionB):
     
     #x_weight = (regionA.settlement_positionX + regionB.settlement_positionX) / 510
@@ -161,12 +167,7 @@ def weighted_distance(regionA, regionB):
     
     return math.hypot(dx, dy)
 
-def simple_distance(regionA, regionB):
-    
-    dx = regionA.settlement_positionX - regionB.settlement_positionX
-    dy = regionA.settlement_positionY - regionB.settlement_positionY
-    
-    return math.hypot(dx, dy)
+
 
 def assign_characters(factions):
 

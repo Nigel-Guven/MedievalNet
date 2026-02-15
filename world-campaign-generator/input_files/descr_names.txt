@@ -5134,7 +5134,6 @@ faction: turks
 		Abu Bakr
 		Agca
 		Akalay
-		ad-Dawlah
 		al Alai
 		al Alfi
 		al Amin
@@ -5147,13 +5146,11 @@ faction: turks
 		al Ma_mun
 		al Muizzi
 		al Muntasir
-		al Mu_tasim
 		al Rashid
 		al Turkumani
 		al Zahiri
 		al-Abbas
 		al-Mulk
-		al-Su_ud
 		Aricanli
 		Arif
 		Arikan
@@ -5241,11 +5238,8 @@ faction: turks
 
 	women
 		Asul
-		Ays_e
 		Behiye
-		Benefs_e
 		Canhabibe
-		Dervis_e
 		Devlet
 		Dilber
 		Dur-cihan
@@ -5258,11 +5252,9 @@ faction: turks
 		Hafza
 		Huban
 		Husni
-		Inanpas_a
 		Ine
 		Islah
 		Kadem
-		Kapabas_a
 		Mansure
 		Melike
 		Nar
@@ -5270,16 +5262,12 @@ faction: turks
 		Nefise
 		Nergis
 		Neslihan
-		Pas_abegi
 		Rabiye
 		Safiye
-		S_ah-huban
 		Sara
 		Saruca
 		Selcuk
 		Selime
-		S_erife-bol
-		S_eruda
 		Sitti
 		Surur
 		Tohin
