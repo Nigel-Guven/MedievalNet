@@ -57,11 +57,8 @@ CAPITAL_CANDIDATES = {
         "Samandar_Province",
         "Kiev_Province",
         "Moscow_Province",
+        "Roman_Province",
     }
-
-SPECIAL_PAPAL_REGIONS = {"Roman_Province"}
-
-SPECIAL_AZTEC_REGIONS = {"Tenochtitlan_Province"}
 
 SPECIAL_SLAVE_REGIONS = {
     "North_America", 
@@ -70,7 +67,8 @@ SPECIAL_SLAVE_REGIONS = {
     "Jolof_Province", 
     "Fezzan",
     "Dongola_Province",
-    "Mekka_Province"
+    "Mekka_Province",
+    "Tenochtitlan_Province",
     }
 
 CAPITAL_CANDIDATES_CONNECTIONS = {

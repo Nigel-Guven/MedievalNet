@@ -4883,7 +4883,6 @@ faction: mongols
 		Mandughai
 		Maria
 		Minghan
-		Oghul
 		Orqina
 		Qacha
 		Sorghaghtani

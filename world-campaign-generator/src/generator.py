@@ -2,7 +2,7 @@ from collections import defaultdict
 from decimal import ROUND_HALF_UP, Decimal
 import random
 import math
-from objects.script_enums import AztecCityBuilding, CastleBuilding, CityBuilding, FactionEnum, AIModel, Gender, Role
+from objects.script_enums import AIBuildingModel, AIRecruitmentModel, AztecCityBuilding, CastleBuilding, CityBuilding, FactionEnum, Gender, Role
 from objects.faction import Faction
 from objects.character.character import FemaleCharacter, MaleCharacter
 from objects.settlementconfiguration import SettlementConfiguration
@@ -18,12 +18,9 @@ def create_factions_configuration(regions, names, region_amount):
     
     factions_list = create_factions(names)
     assign_settlements(factions_list, regions, region_amount)
-    #visualize_map(factions_list, regions)
-    #Create Characters for faction based on amount of regions
+
     assign_characters(factions_list)
-    #Create family records for Faction characters
-    
-    #Create Faction standings, Alliances, Wars
+
     assign_faction_diplomacy_scores(factions_list)
     assign_allies_and_enemies(factions_list)
     
@@ -40,12 +37,19 @@ def create_factions(names_list):
     factions_list = list()
     
     for factionEnum in FactionEnum:
+        
+        randomAIBuildingModel = random.choice(list(AIBuildingModel)) 
+        randomAIRecruitmentModel = random.choice(list(AIRecruitmentModel))
+        
+        random_building_value = randomAIBuildingModel.value
+        random_recruitment_value = randomAIRecruitmentModel.value
+        
         faction = Faction(
             faction_name=factionEnum.value,
-            ai_model=AIModel.BALANCED_SMITH,
+            ai_model=random_building_value + " " + random_recruitment_value,
             ai_label=getAILabel(factionEnum.value),
-            denari=15000,
-            kings_purse=6000,
+            denari=20000,
+            kings_purse=8000,
             settlements=None,
             characters=None,
             character_records=None,
@@ -83,13 +87,13 @@ def getAILabel(factionName):
 # TODO: CONST CAPITALS BASED ON REGION AMOUNT   
 def assign_settlements(factions, regions, region_amount):
 
-    excluded_regions = consts.SPECIAL_SLAVE_REGIONS | consts.SPECIAL_AZTEC_REGIONS | consts.SPECIAL_PAPAL_REGIONS  
+    excluded_regions = consts.SPECIAL_SLAVE_REGIONS 
     potential_seeds = [r for r in regions if r.province_name in consts.CAPITAL_CANDIDATES]
     random.shuffle(potential_seeds)   
     unclaimed = [r for r in regions if r.province_name not in excluded_regions]   
     
     playable_factions = [f for f in factions if f.faction_name not in 
-                         { FactionEnum.AZTECS.value, FactionEnum.PAPAL_STATES.value, FactionEnum.SLAVE.value }]
+                         { FactionEnum.SLAVE.value }]
     
     random.shuffle(playable_factions)
     random.shuffle(factions)
@@ -127,18 +131,6 @@ def assign_settlements(factions, regions, region_amount):
             
             faction.settlements.append(next_region)
             unclaimed.remove(next_region)
-
-    aztec_faction = next(f for f in factions if f.faction_name == FactionEnum.AZTECS.value)
-    aztec_faction.settlements = [
-        r for r in regions
-        if r.province_name in consts.SPECIAL_AZTEC_REGIONS
-    ]
-    
-    papal_faction = next(f for f in factions if f.faction_name == FactionEnum.PAPAL_STATES.value)
-    papal_faction.settlements = [
-        r for r in regions
-        if r.province_name in consts.SPECIAL_PAPAL_REGIONS
-    ]
         
     slave_faction = next(f for f in factions if f.faction_name == FactionEnum.SLAVE.value)
     slave_faction.settlements = [
@@ -166,8 +158,6 @@ def weighted_distance(regionA, regionB):
     dy = regionA.settlement_positionY - regionB.settlement_positionY
     
     return math.hypot(dx, dy)
-
-
 
 def assign_characters(factions):
 
@@ -469,10 +459,10 @@ def create_army(faction):
             return units
         case "teutonic_order":
             units.append("TO Bodyguard")
-            units.append("Spear Militia")
-            units.append("Spear Militia")
-            units.append("Spear Militia")
-            units.append("Spear Militia")
+            units.append("Order Militia")
+            units.append("Order Militia")
+            units.append("Order Militia")
+            units.append("Order Militia")
             return units
         case "slave":
             units.append("NE Bodyguard")
@@ -628,35 +618,9 @@ def assign_allies_and_enemies(factions):
 # TODO: Aztec need changes here
 def update_region_settlement_configurations(factions):
     for factionI in factions:
-        
-        #PAPAL FACTION
-        if factionI.faction_name == "papal_states":
-            for i in range(len(factionI.settlements)):
-                settlementI = factionI.settlements[i]
-                settlement_config = SettlementConfiguration(
-                    settlementI.province_name,
-                    level="city",
-                    population=22000,
-                    faction_creator=factionI.faction_name,
-                    is_castle=False,
-                    buildings=create_city_buildings(),
-                )
-                settlementI.settlement_configuration = settlement_config               
-        #AZTEC FACTION
-        elif factionI.faction_name == "aztecs":
-            for i in range(len(factionI.settlements)):
-                settlementI = factionI.settlements[i]
-                settlement_config = SettlementConfiguration(
-                    settlementI.province_name,
-                    level="city",
-                    population=22000,
-                    faction_creator=factionI.faction_name,
-                    is_castle=False,
-                    buildings=create_aztec_city_buildings(),
-                )
-                settlementI.settlement_configuration = settlement_config          
+                  
         #SLAVE FACTION
-        elif factionI.faction_name == "slave":
+        if factionI.faction_name == "slave":
             for i in range(len(factionI.settlements)):
                 for i in range(len(factionI.settlements)):
                     settlementI = factionI.settlements[i] 
@@ -670,6 +634,20 @@ def update_region_settlement_configurations(factions):
                         settlementI.settlement_configuration = create_motte_bailey_configuration(settlementI)  
                     else:
                         settlementI.settlement_configuration = create_village_configuration(settlementI)
+        elif factionI.faction_name == "aztecs":
+            for i in range(len(factionI.settlements)):
+                for i in range(len(factionI.settlements)):
+                    settlementI = factionI.settlements[i] 
+                    if i == 0:
+                        settlementI.settlement_configuration = create_aztec_city_configuration(settlementI)
+                    elif i == 1:
+                        settlementI.settlement_configuration = create_aztec_large_town_configuration(settlementI)  
+                    elif i == 2:
+                        settlementI.settlement_configuration = create_aztec_city_configuration(settlementI)  
+                    elif i == 3:
+                        settlementI.settlement_configuration = create_aztec_village_configuration(settlementI)  
+                    else:
+                        settlementI.settlement_configuration = create_aztec_village_configuration(settlementI)
         else:                 
         #PLAYABLE FACTIONS
             for i in range(len(factionI.settlements)):
@@ -677,11 +655,11 @@ def update_region_settlement_configurations(factions):
                 if i == 0:
                     settlementI.settlement_configuration = create_large_town_configuration(settlementI, factionI.faction_name)
                 elif i == 1:
-                    settlementI.settlement_configuration = create_motte_bailey_configuration(settlementI, factionI.faction_name)  
+                    settlementI.settlement_configuration = create_town_configuration(settlementI, factionI.faction_name)  
                 elif i == 2:
                     settlementI.settlement_configuration = create_castle_configuration(settlementI, factionI.faction_name)  
                 elif i == 3:
-                    settlementI.settlement_configuration = create_town_configuration(settlementI, factionI.faction_name)  
+                    settlementI.settlement_configuration = create_motte_bailey_configuration(settlementI, factionI.faction_name)  
                 else:
                     settlementI.settlement_configuration = create_village_configuration(settlementI, factionI.faction_name)
                 
@@ -759,6 +737,31 @@ def create_large_town_buildings():
         CityBuilding.CITY_FARM_LEVEL_1]     
 
 # Aztec Faction
+def create_aztec_city_configuration(region):
+    return SettlementConfiguration( 
+        region.province_name, 
+        level="city", 
+        population=12000, 
+        faction_creator= "aztecs",
+        is_castle=False, 
+        buildings=create_aztec_city_buildings(),)
+def create_aztec_large_town_configuration(region):
+    return SettlementConfiguration( 
+        region.province_name, 
+        level="large_town", 
+        population=12000, 
+        faction_creator= "aztecs",
+        is_castle=False, 
+        buildings=create_aztec_large_town_buildings(),)
+def create_aztec_village_configuration(region):
+    return SettlementConfiguration( 
+        region.province_name, 
+        level="village", 
+        population=12000, 
+        faction_creator= "aztecs",
+        is_castle=False, 
+        buildings=create_aztec_village_buildings(),)
+
 def create_aztec_city_buildings():
     return [
         AztecCityBuilding.AZTEC_CORE_CITY_BUILDING_STONE_WALL,

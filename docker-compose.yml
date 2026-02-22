@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   zookeeper:
@@ -40,8 +40,7 @@ services:
   world-map-renderer:
     build: world-map-renderer
     depends_on:
-      kafka:
-        condition: service_healthy
+      - kafka
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
       OUTPUT_DIR: /app/output

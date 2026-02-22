@@ -85,7 +85,7 @@ def main():
             dst.write(";*********************\n")
             dst.write("\n")
             
-            dst.write("faction\t" + faction.faction_name + ", " + faction.ai_model.value + "\n")
+            dst.write("faction\t" + faction.faction_name + ", " + faction.ai_model + "\n")
             dst.write("ai_label\t\t" + faction.ai_label + "\n")
             dst.write(f"denari\t{faction.denari}\n")
             dst.write(f"denari_kings_purse\t{faction.kings_purse}\n")

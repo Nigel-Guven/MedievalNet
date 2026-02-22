@@ -40,8 +40,39 @@ class FactionEnum(Enum):
     PAPAL_STATES = "papal_states"
     SLAVE = "slave"
     
-class AIModel(Enum):
-    BALANCED_SMITH = "balanced smith"
+class AIBuildingModel(Enum):
+    BALANCED = "balanced"
+    RELIGIOUS = "religious"
+    TRADER = "trader"
+    COMFORTABLE = "comfortable"
+    BUREAUCRAT = "bureaucrat"
+    CRAFTSMAN = "craftsman"
+    SAILOR = "sailor"
+    FORTIFIED = "fortified"
+    
+class AIRecruitmentModel(Enum):
+    SMITH = "smith"
+    MAO = "mao"
+    GENGHIS = "genghis"
+    STALIN = "stalin"
+    NAPOLEON = "napoleon"
+    HENRY = "henry"
+    CAESAR = "caesar"
+    RICHARD = "richard"
+    HEINRICH = "heinrich"
+    SUBOTAI = "subotai"
+    KNUD = "knud"
+    GUY = "guy"
+    DOGE = "doge"
+    ROBERT = "robert"
+    WYVADSLAW = "wyvadslaw"
+    VLAD = "vlad"
+    ROGER = "roger"
+    ALFONSO = "alfonso"
+    ARSLAN = "arslan"
+    TAHAR = "tahar"
+    SALADIN = "saladin"
+    TZAR = "tzar"
     
 class Role(Enum):
     LEADER = "leader"
