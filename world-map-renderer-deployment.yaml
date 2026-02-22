@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: world-map-renderer
+  name: world-map-renderer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: world-map-renderer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: world-map-renderer
+    spec:
+      containers:
+      - env:
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: kafka:29092
+        - name: OUTPUT_DIR
+          value: /app/output
+        image: world-map-renderer
+        imagePullPolicy: ""
+        name: world-map-renderer
+        resources: {}
+        volumeMounts:
+        - mountPath: /app/output
+          name: world-map-renderer-claim0
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: world-map-renderer-claim0
+        persistentVolumeClaim:
+          claimName: world-map-renderer-claim0
+status: {}
