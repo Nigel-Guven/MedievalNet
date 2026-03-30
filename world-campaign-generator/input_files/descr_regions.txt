@@ -304,15 +304,15 @@ Badajoz_Province
 	5
 	6
 	religions { catholic 35 orthodox 0 islam 60 pagan 4 heretic 1 sungod 0 }
-North_America
-	Miccosukee
-	spain
-	Native_Rebels
+Euphrates
+	Kufa
+	egypt
+	Arab_Rebels
 	212 198 206
-	america
+	none
 	5
 	6
-	religions { catholic 0 orthodox 0 islam 0 pagan 70 heretic 5 sungod 25 }
+	religions { catholic 0 orthodox 0 islam 70 pagan 25 heretic 5 sungod 0 }
 Malatya_Province
 	Malatya
 	turks
